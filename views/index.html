@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <title>Timestamp microservice</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Timestamp microservice</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row center-align">
+      <h5>Example usage:</h5>
+      <a href="/api/timestamp/1451001600000">Timestamp to UTC</a>
+    </div>
+    <div class="row center-align">
+      <h5>Example Output:</h5>
+      <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+    </div>
+  </div>
+
+  <div class="container margin-top-40">
+    <div class="row">
+      <form class="col s12" action="/api/timestamp/" method="POST">
+        <div class="row">
+          <div class="input-field col s4 offset-s4">
+            <input name="date" placeholder="Enter date to unicode" id="date" type="date" class="validate">
+            <label for="date">Date to timestamp</label>
+          </div>
+        </div>
+        <div class="row center-align" >
+          <button class="btn waves-effect waves-light" type="submit">Convert date to unix timestamp
+            <i class="material-icons right"></i>
+          </button>
+        </div>
+      </form>
+      <form class="col s12" action="/api/timestamp/" method="POST">
+        <div class="row">
+          <div class="input-field col s4 offset-s4">
+            <input name="unix" id="unix" type="number" class="validate">
+            <label for="unix">Unix time to date</label>
+          </div>
+        </div>
+        <div class="row center-align" >
+          <button class="btn waves-effect waves-light" type="submit">Convert unix time to UTC
+            <i class="material-icons right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <div class="center-align">
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
